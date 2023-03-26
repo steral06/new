@@ -1,0 +1,216 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 0;
+  font-style: oblique;
+}
+div{
+  text-align: start;
+}
+span {
+  color: red;
+  font-size: 50px;
+}
+p {
+  color: blue;
+  font-size: 50px;
+
+}
+body {
+  height: 100vh;
+  transition: 0.5s;
+  background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%),url(pizza.jpg)
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 10%;
+}
+header .recherche{
+  background-position: center;
+  margin top: 80px;
+  margin-right: 50px;
+}
+header.logo {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+header ul {
+  display: flex;
+  list-style: none;
+ 
+}
+header ul li {
+  margin:  25px;
+}
+header ul li a {
+  text-decoration: 0;
+  color: white;
+  position: relative;
+}
+header ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+header ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+header ul li a::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #009688;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-out;
+}
+
+header ul li a:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.2s ease-out;
+}
+
+.text{
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.text h1{
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.text p {
+  color: white;
+  margin-left: 250px;
+}
+.links {
+  margin-top: 25px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+.links a{
+  text-decoration: 0;
+  color: white;
+  border: 2px solid burlywood;
+  padding: 5px 40px;
+  position: relative;
+  border-radius: 6px;
+  text-transform: var(0.2s);
+}
+.link a ::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: blanchedalmond;
+  color: rgba(21, 21, 231, 0.842);
+  transition: 0.7s;
+  z-index: -1;
+  border-radius: 6px;
+}
+.link a:hover::after {
+  width: 100%;
+}
+.link a:hover{
+  border: 2px solid transparent;
+  background-color: red;
+}
+
+.cn:hover{
+  background-color: rgba(255, 30, 0, 0.877);
+  transition: cubic-bezier(rgba(196, 14, 14, 0.295));
+}
+
+/**/
+@
+.parent-menu {
+  position: relative; /* position relative pour les éléments enfants */
+}
+
+.sub-menu {
+  display: none; /* masquer le sous-menu par défaut */
+  position: absolute; /* position absolue pour positionner le sous-menu */
+  top: 100%; /* positionner le sous-menu en dessous du parent-menu */
+  left: 0;
+  background-color: #ffffff; /* couleur de fond du sous-menu */
+  border: 1px solid #cccccc; /* bordure du sous-menu */
+  padding: 0; /* suppression des marges intérieures */
+  z-index: 1; /* mise en avant du sous-menu */
+}
+
+.parent-menu:hover .sub-menu {
+  display: block; /* afficher le sous-menu lors du survol */
+}
+
+.sub-menu li {
+  display: block;
+  width: 100%; 
+  text-align: left;
+  padding: 10px;  
+}
+
+.sub-menu li:hover {
+  background-color: #f5f5f5; /* couleur de fond au survol */
+}
+
+/* style de base pour la barre de recherche */
+#search-box {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+/* style de base pour le bouton d'icône de microphone */
+#microphone-button {
+  width: 30px;
+  height: 30px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+/* style de base pour l'icône de microphone */
+#microphone-button i {
+  font-size: 18px;
+  color: #555;
+}
+
+/* style de base pour masquer l'icône de microphone si l'API Web Speech n'est pas prise en charge */
+.no-web-speech #microphone-button {
+  display: none;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -1,0 +1,66 @@
+*{
+    margin: 9px;
+    padding: 0;
+    background-color: rgb(16, 51, 127);
+    color: white;
+}
+.tout{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gauche{
+    width: 50%;
+}
+.gauche label:hover{
+    color: aqua;
+}
+textarea{
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    width: 500px;
+    height: 96%;
+    border-radius: 5px;
+    resize: none;
+}
+textarea:hover{
+    border-color: aqua;
+}
+h1{
+    text-align: center;
+}
+.bouton{
+    margin-left: 170px;
+    border-radius: 3px;
+    height: 10px;
+    outline: none;
+    justify-content: space-between;
+}
+::placeholder{
+    color: white;
+    padding-top: 5px;
+}
+button{
+    background-color: aliceblue;
+    height: 40px;
+    color: black;
+    border-radius: 8px;
+    width: 200px;
+   text-align: center;
+}
+button:hover{
+    background-color: transparent;
+    color: aqua;
+    border-color: aqua;
+    height: 45px;
+    width: 210px;
+    transition: 0.5s;
+}
+.long{
+    margin-left: 250px;
+}
+@media screen and (max-width:920px){
+    form .tout .droite{
+        margin-left:  0px;
+    }
+}

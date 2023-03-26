@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contain{
+    /* permet d'aligner horizontalement */
+    display: flex;
+    flex-wrap: wrap;
+}
+.contain .img{
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+h4{
+    margin-top: 6px;
+    text-align: center;
+    color: brown;
+}
+
+.contain .img img{
+    width: 300px;
+}

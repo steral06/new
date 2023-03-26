@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+    background-image: url('1.webp');
+    color: rgb(94, 95, 203);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+.g{
+    background-size: cover;
+}
+.corps{
+    width: 50%;
+}
+.cont{
+    background-color: rgb(223, 231, 199);
+    border-radius: 10px;
+}
+.tout{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.gauche{
+    margin-right: 50px;
+}
+.droite{
+    margin-left: 100px;
+}
+textarea{
+    color: rgb(114, 89, 25);
+    resize: none;
+    height: 1200px;
+    width: 600px;
+    border-radius: 10px;
+    background-color: rgb(223, 231, 199);
+}
+.bouton{
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 44%; 
+}
+.bouton .first{
+    border-radius: 2px;
+    margin-right: 20px;
+    outline: none;
+    border: 5px;
+    font-size: 15px;
+    background-color: rgb(211, 230, 71);
+    height: 30px;
+    transition: transform 0.5s;
+}
+.bouton .second{
+    outline: none;
+    background-color: rgb(211, 230, 71);
+    font-size: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 5px;
+    height: 30px;
+    transition: transform 0.5s;
+}
+.bouton .first:hover, .bouton .second:hover{
+    transform: scale(1.05);
+}
+@media screen and (max-width:920px){
+    form .droite, .bouton{
+        margin-left:  0px;
+    }
+}

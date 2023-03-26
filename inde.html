@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>PIZZA DI LUSSO</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <p>PIZZA <span>DI LUSSO</span></p>
+      </div>
+
+      <ul class="menu">
+        <li class="parent-menu"> 
+          <a href="#">Menu</a> 
+          <div class="sub-menu">
+            <ul>
+              <li><a href="menu-principal.html">Menu principal</a></li>
+              <li class="second"><a href="menu-personnalise.html">Menu personnalisé</a></li>
+            </ul>
+          </div>
+        </li>
+        
+        <li class="n"><a href="#">Contact</a></li>
+        <li class="o"><a href="#">Boissons</a></li>
+        <li class="p"><a href="#">Réservation</a></li>
+      </ul>
+    </header>
+    
+    <section>
+      <div class="search-container">
+        <form id="search-form">
+          <input type="text" id="search-box" placeholder="Recherche...">
+          <button id="microphone-button" type="button"><i class="fas fa-microphone"></i></button>
+        </form>
+      </div>
+      
+      <script> 
+        const pages = {
+          "menu principal": "menu-principal.html",
+          "menu personnalisé": "menu-personnalise.html",
+          "réservation": "reservation.html",
+          "contact": "contact.html",
+          "boisson": "boisson.html"
+        };
+        const searchForm = document.querySelector("#search-form");
+        const searchBox = document.querySelector("#search-box");
+        function searchPages(searchTerm) {
+          const lowercaseSearchTerm = searchTerm.toLowerCase();
+          for (const page in pages) {
+            if (lowercaseSearchTerm.includes(page)) {
+              window.location.href = pages[page];
+              return;
+            }
+          }
+          // Si aucune correspondance n'a été trouvée, vous pouvez afficher un message d'erreur ou effectuer une autre action
+        }
+        searchForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+          const searchTerm = searchBox.value;
+          searchPages(searchTerm);
+        });
+        
+        recognition.onresult = function(event) {
+          const searchTerm = event.results[0][0].transcript;
+          searchPages(searchTerm);
+        };
+      </script>
+    </section>
+
+  </body>
+</html>

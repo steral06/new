@@ -1,0 +1,77 @@
+body{
+    color: darkgoldenrod;
+    background-image: url(73p.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-image: url(pizza.jpg)
+
+}
+.ac{
+    text-decoration: none;
+    display: flex;
+    position: relative;
+}
+.ac li{
+    list-style: none;
+    margin-right: 50px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.ac a{
+    color: darkgoldenrod;
+    margin-right: 0px;
+    text-decoration: none;
+}
+.second{
+    padding-top: 0;
+}
+header{
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 90px;
+    color: darkgoldenrod;
+    margin-left: 280px;
+}
+.seul{
+    margin-left: 150px;
+}
+h1{
+    background-color: white;
+    font-family: blinkMacSystemFont, 'Arial Narrow Bold', arial ;
+}
+.sub-menu{
+    display: none;
+    top: 10%;
+    position: relative;
+}
+.sub-menu ul{
+    position: absolute;
+}
+ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background-color: rgb(221, 221, 234);
+    margin-top: 20px;
+    margin-left: -40px;
+    list-style: none;
+} 
+.ad{
+    color: black;
+}
+ul li a{
+    
+    text-decoration: none;
+    color: rgb(0, 20, 29);
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5 ease;
+}
+
+ul li a:hover{
+    background-color: rgba(87, 104, 112, 0.596);
+    color: blue;
+    
+}
